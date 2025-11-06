@@ -46,3 +46,9 @@ def loans_over_time(df: pd.DataFrame,freq : str= "M") -> pd.DataFrame:
         .reset_index()
     )
     return ts
+
+def top3_genres(df: pd.DataFrame) -> pd.DataFrame:
+    return loans_by_genre(df).head(3)
+
+def top3_branches(df: pd.DataFrame) -> pd.DataFrame:
+    return loans_by_branch(df).head(3)
